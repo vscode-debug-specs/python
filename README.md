@@ -1,54 +1,51 @@
 ---
 layout: default
 title: How to Debug Python with VSCode
-permalink: /python/
+permalink: /
 ---
+
 # How to Debug Python with VSCode
 
 ## Summary
 
-* [Basic](#basic)
-* [Spec](#spec)
-* [Instruction](#instruction)
-* [unit test](#unit-test)
-* [executable file debug](#executable-file-debug)
+- [Basic](#basic)
+- [Spec](#spec)
+- [Instruction](#instruction)
+- [unit test](#unit-test)
+- [executable file debug](#executable-file-debug)
 
 ## Basic
 
-* [Python.org](https://www.python.org/)
-* Extension: [Python](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python)
-* Debugger: Python
-* module code: [bubble_sort.py](https://github.com/74th/vscode-debug-specs/blob/master/python/bubble_sort.py)
+- [Python.org](https://www.python.org/)
+- Extension: [Python](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python)
+- Debugger: Python
+- module code: [bubble_sort.py](https://github.com/74th/vscode-debug-specs/blob/master/python/bubble_sort.py)
 
 ## Spec
 
-* OS
-	* ✅ MacOS
-	* ✅ Windows
-	* ✅ Linux
-* Break Point
-	* ✅ break point
-	* ❓ condition break point : it does not work on my machine, always breaks
-	* ❌ function breakpoint
-	* ✅ uncaught exception breakpoint
-	* ✅ all exception breakpoint
-* Step Execution
-	* ✅ Step Over
-	* ✅ Step Into
-	* ✅ Step Out
-	* ✅ Continue
-* Variables
-	* ✅ variables views
-	* ✅ watch variables
-* Call Stack
-	* ✅ call stack
-* Evaluation
-	* ✅ eval expression to show variables
-	* ✅ eval expression to change variables
-* Type of Execution
-	* ✅ debug unit test
-	* ✅ debug executable package
-	* ❓ remote debugging
+- OS
+  _ ✅ MacOS
+  _ ✅ Windows \* ✅ Linux
+- Break Point
+  _ ✅ break point
+  _ ❓ condition break point : it does not work on my machine, always breaks
+  _ ❌ function breakpoint
+  _ ✅ uncaught exception breakpoint \* ✅ all exception breakpoint
+- Step Execution
+  _ ✅ Step Over
+  _ ✅ Step Into
+  _ ✅ Step Out
+  _ ✅ Continue
+- Variables
+  _ ✅ variables views
+  _ ✅ watch variables
+- Call Stack \* ✅ call stack
+- Evaluation
+  _ ✅ eval expression to show variables
+  _ ✅ eval expression to change variables
+- Type of Execution
+  _ ✅ debug unit test
+  _ ✅ debug executable package \* ❓ remote debugging
 
 ## Instruction
 
@@ -66,7 +63,7 @@ If you want to pyenv or other environment tools, select your environment with be
 
 ## unit test
 
-* test code: [test_bubble_sort.py](https://github.com/74th/vscode-debug-specs/blob/master/python/test_bubble_sort.py)
+- test code: [test_bubble_sort.py](https://github.com/74th/vscode-debug-specs/blob/master/python/test_bubble_sort.py)
 
 ### inline
 
@@ -146,10 +143,7 @@ Menu: Python: Python program with Integrated Terminal/Console
       "console": "integratedTerminal",
       "env": {},
       "envFile": "${workspaceRoot}/.env",
-      "debugOptions": [
-        "WaitOnAbnormalExit",
-        "WaitOnNormalExit"
-      ]
+      "debugOptions": ["WaitOnAbnormalExit", "WaitOnNormalExit"]
     }
   ]
 }
@@ -175,12 +169,7 @@ note: ![DebugPython](DebugPython.png)
       "pythonPath": "${config:python.pythonPath}",
       //"program": "${file}",
       "program": "bubble_sorter.py",
-      "args": [
-        "4",
-        "3",
-        "2",
-        "1"
-      ],
+      "args": ["4", "3", "2", "1"],
       "cwd": "${workspaceRoot}",
       "env": {},
       "envFile": "${workspaceRoot}/.env",
@@ -227,19 +216,18 @@ python bubble_sorter_for_remote.py 4 3 2 1
 
 ```json
 {
-	"version": "0.2.0",
-	"configurations": [
-		{
-			"name": "Attach (Remote Debug)",
-			"type": "python",
-			"request": "attach",
-			"localRoot": "${workspaceRoot}",
-			"remoteRoot": "${workspaceRoot}",
-			"port": 3000,
-			"secret": "my_secret",
-			"host": "localhost"
-		}
-	]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach (Remote Debug)",
+      "type": "python",
+      "request": "attach",
+      "localRoot": "${workspaceRoot}",
+      "remoteRoot": "${workspaceRoot}",
+      "port": 3000,
+      "secret": "my_secret",
+      "host": "localhost"
+    }
+  ]
 }
 ```
-
