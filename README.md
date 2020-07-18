@@ -1,9 +1,3 @@
----
-layout: default
-title: How to Debug Python with VSCode
-permalink: /
----
-
 # How to Debug Python with VSCode
 
 ## Summary
