@@ -1,4 +1,4 @@
-# How to Debug Python with VSCode
+# How to Debug Python with VS Code
 
 ## Summary
 
@@ -79,7 +79,7 @@ Codelens on test function shows run and debug test button.
 
 ![CodelensUnitTest6.png](CodelensUnitTest6.png)
 
-But it sometimes doesn't start debug in my machine. Then, it restarts VSCode and retry.
+But it sometimes doesn't start debug in my machine. Then, it restarts VS Code and retry.
 
 ### use launch.json
 
