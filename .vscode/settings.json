@@ -1,11 +1,12 @@
 {
-	"python.unitTest.unittestArgs": [
-		"-v",
-		"-s",
-		".",
-		"-p",
-		"test_*.py"
-	],
-	"python.unitTest.unittestEnabled": true,
-	"python.pythonPath": "/Users/nnyn/.pyenv/versions/3.6.5/bin/python"
+  "python.testing.unittestEnabled": true,
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    "./bubblesort",
+    "-p",
+    "test_*.py"
+  ],
+  "python.testing.pytestEnabled": false,
+  "python.testing.nosetestsEnabled": false
 }
