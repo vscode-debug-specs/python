@@ -13,7 +13,7 @@
 - [Python.org](https://www.python.org/)
 - Extension: [Python](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python)
 - Debugger: Python
-- module code: [bubble_sort.py](https://github.com/74th/vscode-debug-specs/blob/master/python/bubble_sort.py)
+- module code: [bubble_sort.py](https://github.com/vscode-debug-specs/python/blob/master/bubble_sort.py)
 
 ## Spec
 
@@ -61,7 +61,7 @@ If you want to pyenv or other environment tools, select your environment with be
 
 ## unit test
 
-- test code: [test_bubble_sort.py](https://github.com/74th/vscode-debug-specs/blob/master/python/test_bubble_sort.py)
+- test code: [test_bubble_sort.py](https://github.com/vscode-debug-specs/python/blob/master/test_bubble_sort.py)
 
 ### inline
 
@@ -89,8 +89,6 @@ But it sometimes doesn't start debug in my machine. Then, it restarts VS Code an
 
 Menu: Python:Python module
 
-![DebugPythonModule](DebugPythonModule.png)
-
 ```json
 {
   "version": "0.2.0",
@@ -116,8 +114,6 @@ Menu: Python:Python module
 
 executable file: [main.py](https://github.com/vscode-debug-specs/python/blob/master/main.py)
 
-note: ![DebugPython](DebugPython.png)
-
 ### launch.json
 
 ```json
@@ -138,8 +134,6 @@ note: ![DebugPython](DebugPython.png)
 ## execute module debug
 
 module : [bubblesort](https://github.com/vscode-debug-specs/python/blob/master/bubblesort)
-
-note: ![DebugPython](DebugPython.png)
 
 ### launch.json
 
