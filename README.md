@@ -11,9 +11,9 @@
 ## Basic
 
 - [Python.org](https://www.python.org/)
-- Extension: [Python](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python)
+- Extension: [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) `ms-python.python`
 - Debugger: Python
-- module code: [bubble_sort.py](https://github.com/vscode-debug-specs/python/blob/master/bubble_sort.py)
+- module code: [bubblesort/bubblesort_logic.py](https://github.com/vscode-debug-specs/python/blob/master/bubblesort/bubblesort_logic.py)
 
 ## Spec
 
@@ -61,7 +61,7 @@ If you want to pyenv or other environment tools, select your environment with be
 
 ## unit test
 
-- test code: [test_bubble_sort.py](https://github.com/vscode-debug-specs/python/blob/master/test_bubble_sort.py)
+- test code: [bubblesort/test/test_bubblesort.py](https://github.com/vscode-debug-specs/python/blob/master/bubblesort/test/test_bubblesort.py)
 
 ### inline
 
@@ -133,7 +133,7 @@ executable file: [main.py](https://github.com/vscode-debug-specs/python/blob/mas
 
 ## execute module debug
 
-module : [bubblesort](https://github.com/vscode-debug-specs/python/blob/master/bubblesort)
+module : [bubblesort](https://github.com/vscode-debug-specs/python/tree/master/bubblesort)
 
 ### launch.json
 
@@ -191,7 +191,7 @@ python bubble_sorter_for_remote.py 4 3 2 1
       "request": "attach",
       "pathMappings": [
         {
-          "localRoot": "${workspaceRoot}",
+          "localRoot": "${workspaceFolder}",
           "remoteRoot": "/home/nnyn/vscode-debug-specs/python"
         }
       ],
