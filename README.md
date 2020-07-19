@@ -114,7 +114,7 @@ Menu: Python:Python module
 
 ## executable file debug
 
-executable file: [bubblesort/**main**.py](https://github.com/vscode-debug-specs/python/blob/master/bubblesort/__main__.py)
+executable file: [main.py](https://github.com/vscode-debug-specs/python/blob/master/main.py)
 
 note: ![DebugPython](DebugPython.png)
 
@@ -128,7 +128,7 @@ note: ![DebugPython](DebugPython.png)
       "name": "Python",
       "type": "python",
       "request": "launch",
-      "program": "${workspaceFolder}/bubblesort/__main__.py",
+      "program": "${workspaceFolder}/main.py",
       "args": ["4", "3", "2", "1"]
     }
   ]
