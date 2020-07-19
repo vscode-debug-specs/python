@@ -12,7 +12,8 @@
       "name": "launch Python file",
       "type": "python",
       "request": "launch",
-      "program": "${workspaceFolder}/bubblesort/__main__.py",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/main.py",
       "args": ["4", "3", "2", "1"]
     },
     {
