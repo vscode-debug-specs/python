@@ -55,9 +55,9 @@ If you want to pyenv or other environment tools, select your environment with be
 
 `F1`->`Python: Select Workspace Interpreter`
 
-![SelectWorkspaceInterpreter1.png](SelectWorkspaceInterpreter1.png)
+![SelectWorkspaceInterpreter1.png](docs/SelectWorkspaceInterpreter1.png)
 
-![SelectWorkspaceInterpreter2.png](SelectWorkspaceInterpreter2.png)
+![SelectWorkspaceInterpreter2.png](docs/SelectWorkspaceInterpreter2.png)
 
 ## unit test
 
@@ -67,21 +67,21 @@ If you want to pyenv or other environment tools, select your environment with be
 
 `F1`->`Python: Run Current Unit Test File`
 
-![CodelensUnitTest1.png](CodelensUnitTest1.png)
+![CodelensUnitTest1.png](docs/CodelensUnitTest1.png)
 
 `Enable and configure a Test Framework.`->select your test framework.
 
-![CodelensUnitTest2.png](CodelensUnitTest2.png)
-![CodelensUnitTest3.png](CodelensUnitTest3.png)
+![CodelensUnitTest2.png](docs/CodelensUnitTest2.png)
+![CodelensUnitTest3.png](docs/CodelensUnitTest3.png)
 
 sample: `unittest`->`.`->`test_*`
 
-![CodelensUnitTest4.png](CodelensUnitTest4.png)
-![CodelensUnitTest5.png](CodelensUnitTest5.png)
+![CodelensUnitTest4.png](docs/CodelensUnitTest4.png)
+![CodelensUnitTest5.png](docs/CodelensUnitTest5.png)
 
 Codelens on test function shows run and debug test button.
 
-![CodelensUnitTest6.png](CodelensUnitTest6.png)
+![CodelensUnitTest6.png](docs/CodelensUnitTest6.png)
 
 But it sometimes doesn't start debug in my machine. Then, it restarts VS Code and retry.
 
