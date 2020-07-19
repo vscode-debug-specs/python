@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
-''' module bubble_sort '''
-
 import unittest
-import bubble_sort
+import bubblesort
 
 
 class TestBubbleSort(unittest.TestCase):
-    '''bubble sort test '''
+    """bubble sort test """
 
     def test_bubble_sort(self):
-        '''test bubble sort'''
+        """test bubble sort"""
 
         before = [4, 3, 2, 1]
-        after = bubble_sort.bubble_sort(before)
+        after = bubblesort.bubblesort(before)
         self.assertEqual([1, 2, 3, 4], after, "must sort")
+
+if __name__ == '__main__':
+    unittest.main()

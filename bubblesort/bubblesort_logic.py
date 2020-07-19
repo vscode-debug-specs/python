@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-''' module bubble_sort '''
+from typing import List
 
 
-def bubble_sort(nums):
+def bubblesort(nums: List[int]):
     ''' sort list '''
     for i in range(0, len(nums)):
         for j in range(0, len(nums) - i - 1):
