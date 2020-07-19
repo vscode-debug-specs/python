@@ -5,15 +5,20 @@
       "name": "Python Module test",
       "type": "python",
       "request": "launch",
-      "stopOnEntry": true,
       "module": "unittest",
       "args": ["bubblesort.test.test_bubblesort"]
     },
     {
-      "name": "launch Python",
+      "name": "launch Python file",
       "type": "python",
       "request": "launch",
-      "stopOnEntry": true,
+      "program": "${workspaceFolder}/bubblesort/__main__.py",
+      "args": ["4", "3", "2", "1"]
+    },
+    {
+      "name": "launch Python module",
+      "type": "python",
+      "request": "launch",
       "module": "bubblesort",
       "args": ["4", "3", "2", "1"]
     },

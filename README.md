@@ -18,28 +18,32 @@
 ## Spec
 
 - OS
-  _ ✅ MacOS
-  _ ✅ Windows \* ✅ Linux
+  - ✅ MacOS
+  - ✅ Windows
+  - ✅ Linux
 - Break Point
-  _ ✅ break point
-  _ ❓ condition break point : it does not work on my machine, always breaks
-  _ ❌ function breakpoint
-  _ ✅ uncaught exception breakpoint \* ✅ all exception breakpoint
+  - ✅ break point
+  - ✅ condition break point
+  - ❌ function breakpoint
+  - ✅ uncaught exception breakpoint
+  - ✅ all exception breakpoint
 - Step Execution
-  _ ✅ Step Over
-  _ ✅ Step Into
-  _ ✅ Step Out
-  _ ✅ Continue
+  - ✅ Step Over
+  - ✅ Step Into
+  - ✅ Step Out
+  - ✅ Continue
 - Variables
-  _ ✅ variables views
-  _ ✅ watch variables
-- Call Stack \* ✅ call stack
+  - ✅ variables views
+  - ✅ watch variables
+- Call Stack
+  - ✅ call stack
 - Evaluation
-  _ ✅ eval expression to show variables
-  _ ✅ eval expression to change variables
+  - ✅ eval expression to show variables
+  - ✅ eval expression to change variables
 - Type of Execution
-  _ ✅ debug unit test
-  _ ✅ debug executable package \* ❓ remote debugging
+  - ✅ debug unit test
+  - ✅ debug executable package
+  - ✅ remote debugging
 
 ## Instruction
 
@@ -95,49 +99,14 @@ Menu: Python:Python module
       "name": "Python Module",
       "type": "python",
       "request": "launch",
-      "stopOnEntry": true,
-      "pythonPath": "${config:python.pythonPath}",
       "module": "unittest",
       "args": [
         // test package
         // <test_file>
         // <test_file>.<test_class>
         // <test_file>.<test_class>.<test_method>
-        "test_bubble_sort.TestBubbleSort.test_bubble_sort"
-      ],
-      "cwd": "${workspaceRoot}",
-      "env": {},
-      "envFile": "${workspaceRoot}/.env",
-      "debugOptions": [
-        "WaitOnAbnormalExit",
-        "WaitOnNormalExit",
-        "RedirectOutput"
+        "bubblesort.test.test_bubblesort"
       ]
-    }
-  ]
-}
-```
-
-### debug with integrated terminal
-
-Menu: Python: Python program with Integrated Terminal/Console
-
-```json
-{
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Integrated Terminal/Console",
-      "type": "python",
-      "request": "launch",
-      "stopOnEntry": true,
-      "pythonPath": "${config:python.pythonPath}",
-      "program": "bubble_sorter.py",
-      "cwd": "",
-      "console": "integratedTerminal",
-      "env": {},
-      "envFile": "${workspaceRoot}/.env",
-      "debugOptions": ["WaitOnAbnormalExit", "WaitOnNormalExit"]
     }
   ]
 }
@@ -145,7 +114,7 @@ Menu: Python: Python program with Integrated Terminal/Console
 
 ## executable file debug
 
-executable file: [bubble_sorter.py](https://github.com/74th/vscode-debug-specs/blob/master/python/bubble_sorter.py)
+executable file: [bubblesort/**main**.py](https://github.com/vscode-debug-specs/python/blob/master/bubblesort/__main__.py)
 
 note: ![DebugPython](DebugPython.png)
 
@@ -159,27 +128,37 @@ note: ![DebugPython](DebugPython.png)
       "name": "Python",
       "type": "python",
       "request": "launch",
-      "stopOnEntry": true,
-      "pythonPath": "${config:python.pythonPath}",
-      //"program": "${file}",
-      "program": "bubble_sorter.py",
-      "args": ["4", "3", "2", "1"],
-      "cwd": "${workspaceRoot}",
-      "env": {},
-      "envFile": "${workspaceRoot}/.env",
-      "debugOptions": [
-        "WaitOnAbnormalExit",
-        "WaitOnNormalExit",
-        "RedirectOutput"
-      ]
+      "program": "${workspaceFolder}/bubblesort/__main__.py",
+      "args": ["4", "3", "2", "1"]
+    }
+  ]
+}
+```
+
+## execute module debug
+
+module : [bubblesort](https://github.com/vscode-debug-specs/python/blob/master/bubblesort)
+
+note: ![DebugPython](DebugPython.png)
+
+### launch.json
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python",
+      "type": "python",
+      "request": "launch",
+      "module": "bubblesort",
+      "args": ["4", "3", "2", "1"]
     }
   ]
 }
 ```
 
 ## remote debug
-
-TODO: This do not work on my machine!
 
 ### prepare
 
@@ -216,11 +195,14 @@ python bubble_sorter_for_remote.py 4 3 2 1
       "name": "Attach (Remote Debug)",
       "type": "python",
       "request": "attach",
-      "localRoot": "${workspaceRoot}",
-      "remoteRoot": "${workspaceRoot}",
-      "port": 3000,
-      "secret": "my_secret",
-      "host": "localhost"
+      "pathMappings": [
+        {
+          "localRoot": "${workspaceRoot}",
+          "remoteRoot": "/home/nnyn/vscode-debug-specs/python"
+        }
+      ],
+      "port": 3333,
+      "host": "127.0.0.1"
     }
   ]
 }
